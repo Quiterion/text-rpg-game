@@ -1,0 +1,148 @@
+{
+   "starter_room":{
+      "type":"basic_room",
+      "params":{
+         "effect_text":"You find yourself within a dusty cavern and see a flaming torch on a rocky wall.\nSelect one of the commands below either by typing out the text presented or via referring it by number (1-4, etc)\nUse the shortcut ctrl-C to exit or simply close the window of your terminal emulator.",
+         "location_text":"You see a great wooden door before you. The air smells musky and stale.",
+         "after_text":"You're back in the room where you started! A flaming torch lies on a rocky wall.",
+         "moves_dict":{
+           "go north":[0, -1],
+           "go east":[1, 0],
+           "go south":[0, 1],
+           "go west":[-1, 0]
+         }
+      },
+      "coords":[
+         0,
+         0
+      ]
+   },
+   "potion_room":{
+      "type":"loot_room",
+      "params":{
+         "effect_text":"You heave yourself through a hefty wooden door and see a small wooden chest chest on the ground. Intrigued, you open it.",
+         "location_text":"Two new entrances lie before you, the one to the east looks less menacing.",
+         "after_text":"A small wooden chest lies on the ground, opened and empty.",
+         "item":{
+            "type":"item_obj",
+            "params":{
+               "name":"potion",
+               "hpdelta":10,
+               "dmgtype":null,
+               "heal_bool":true,
+               "effect_text":"You consume the purple potion and instantly feel more energetic and alert."
+            }
+         },
+         "moves_dict":{
+           "go north":[0, -1],
+           "go east":[1, 0],
+           "go south":[0, 1],
+           "go west":[-1, 0]
+         },
+         "quantity":2
+       },
+      "coords":[
+         1,
+         0
+      ]
+   },
+   "big_spider_room":{
+      "type":"enemy_room",
+      "params":{
+         "effect_text":"You creak open a large wooden door and hear the gurgling of a great monster before you.",
+         "location_text":"A large dead spider lies on the ground. The room features two wooden doors and from a brilliant light shining towards you.",
+         "after_text":"A large dead spider lies on the ground.",
+         "enemy":{
+            "type":"monster_obj",
+            "params":{
+               "max_health":10,
+               "attack_damage":4,
+               "name":"Big Angry Spider"
+            }
+         },
+         "moves_dict":{
+           "go north":[0, -1],
+           "go east":[1, 0],
+           "go south":[0, 1],
+           "go west":[-1, 0]
+         }
+      },
+      "coords":[
+         1,
+         1
+      ]
+   },
+   "small_spider_room":{
+      "type":"enemy_room",
+      "params":{
+         "effect_text":"You enter a less-menacing looking room, and are greeted by a black widow spider hanging infront of your face.",
+         "location_text":"A small dead spider lies on the ground. The rocky walls feature two exits, one to the west and one to the south.",
+         "after_text":"A small dead spider lies on the ground.",
+         "enemy":{
+            "type":"monster_obj",
+            "params":{
+               "max_health":5,
+               "attack_damage":4,
+               "name":"small spider"
+            }
+         },
+         "moves_dict":{
+           "go north":[0, -1],
+           "go east":[1, 0],
+           "go south":[0, 1],
+           "go west":[-1, 0]
+         }
+      },
+      "coords":[
+         2,
+         0
+      ]
+   },
+   "sword_room":{
+      "type":"loot_room",
+      "params":{
+         "effect_text":"You enter the room and are greeted by a large wooden chest. Intrigued, you open it.",
+         "location_text":"The large, empty chest is displayed prominently in the room. You see an exit to the north and to the west.",
+         "after_text":"A large, empty, wooden chest lies on the ground.",
+         "item":{
+            "type":"item_obj",
+            "params":{
+               "name":"steel sword",
+               "hpdelta":7,
+               "dmgtype":null,
+               "heal_bool":false,
+               "effect_text":null
+            }
+         },
+         "moves_dict":{
+           "go north":[0, -1],
+           "go east":[1, 0],
+           "go south":[0, 1],
+           "go west":[-1, 0]
+         },
+         "quantity":1
+      },
+      "coords":[
+         2,
+         1
+      ]
+   },
+   "victory_room":{
+      "type":"win_room",
+      "params":{
+         "effect_text":"You step into a new cavern, intrigued by the blinding light tunnelling towards you.\nFollowing it, you hear the whooshing of tree branches and the chirping of small birds.\nFreedom awaits you.\n\nYou have won!\n",
+         "location_text":"",
+         "after_text":"",
+         "moves_dict":{
+           "go north":[0, -1],
+           "go east":[1, 0],
+           "go south":[0, 1],
+           "go west":[-1, 0]
+         }
+      },
+      "coords":[
+         1,
+         2
+      ]
+   }
+}

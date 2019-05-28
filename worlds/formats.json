@@ -1,0 +1,110 @@
+{
+   "starter_room":{
+      "type":"basic_room",
+      "params":{
+         "effect_text":"",
+         "location_text":"",
+         "after_text":"",
+         "moves_dict":{
+           "go north":[0, -1],
+           "go east":[1, 0],
+           "go south":[0, 1],
+           "go west":[-1, 0]
+         }
+      },
+      "coords":[0,0]
+   },
+   "item_room":{
+      "type":"loot_room",
+      "params":{
+         "effect_text":"",
+         "location_text":"",
+         "after_text":"",
+         "item":{
+            "type":"item_obj",
+            "params":{
+               "name":"",
+               "hpdelta":0,
+               "dmgtype":null,
+               "heal_bool":false,
+               "effect_text":""
+            }
+         },
+         "moves_dict":{
+           "go north": [0, -1],
+           "go east": [1, 0],
+           "go south":[0, 1],
+           "go west":[-1, 0]
+         },
+         "quantity":0
+      },
+      "coords":[0,0]
+   },
+   "monster_room":{
+      "type":"enemy_room",
+      "params":{
+         "effect_text":"",
+         "location_text":"",
+         "after_text":"",
+         "enemy":{
+            "type":"monster_obj",
+            "params":{
+               "max_health":0,
+               "attack_damage":0,
+               "name":"",
+               "dmgtype":null
+            }
+         },
+         "moves_dict":{
+           "go north": [0, -1],
+           "go east": [1, 0],
+           "go south":[0, 1],
+           "go west":[-1, 0]
+         }
+      },
+      "coords":[0,0]
+   },
+   "victory_room":{
+      "type":"win_room",
+      "params":{
+         "effect_text":"",
+         "location_text":"",
+         "after_text":"",
+         "moves_dict":{
+           "go north": [0, -1],
+           "go east": [1, 0],
+           "go south":[0, 1],
+           "go west":[-1, 0]
+         }
+      },
+      "coords":[0,0]
+   },
+   "wizard_npc_room":{
+      "type":"wizard_room",
+      "params":{
+         "effect_text":"",
+         "location_text":"",
+         "after_text":"",
+         "win_text":"",
+         "keys": [],
+         "item":{
+            "type":"item_obj",
+            "params":{
+               "name":"",
+               "hpdelta":0,
+               "dmgtype":null,
+               "heal_bool":false,
+               "effect_text":""
+            }
+          },
+         "moves_dict":{
+           "go north": [0, -1],
+           "go east": [1, 0],
+           "go south":[0, 1],
+           "go west":[-1, 0]
+         },
+         "quantity": 1
+      },
+      "coords":[0,0]
+   }
+}
