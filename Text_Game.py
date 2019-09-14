@@ -4,13 +4,15 @@ import random
 import time
 import json
 import os
+import sys
 
 def printslow(text):
     # helper function for outputting text one character at a time
-    print('')
-    for char in text:
-        print(char, end='')
-        time.sleep(0.005)
+    ##print('')
+    ##for char in text:
+    ##    print(char, end='')
+    ##    time.sleep(0.005)
+    print(text)
 
 
 class Character:
@@ -365,7 +367,10 @@ YP   YP Y8888D'    YP    Y88888P VP   V8P    YP    ~Y8888P' 88   YD Y88888P     
         intro_text = "A Text-Based Adventure Game by <author>\n(c) 2019 - See GPLv3 license for details\n\n\
 ==============================================\nPlease select one of the following questlines by name:\n"
         worlds_list = []
-        for file in os.scandir('worlds/'):
+        world_path ='worlds/'
+        if len(sys.argv) != 1:
+            world_path = sys.argv[1]
+        for file in os.scandir(world_path):
             filename = os.path.basename(file).split('.')[0]
             if filename == "formats":
                 continue  # ignore formats file
@@ -383,7 +388,7 @@ YP   YP Y8888D'    YP    Y88888P VP   V8P    YP    ~Y8888P' 88   YD Y88888P     
                 break
             printslow("Please select one of the following questlines:\n" + worlds_text + "\n")
 
-        config = json.loads(open('worlds/'+inp+'.json', 'r').read())
+        config = json.loads(open(world_path+inp+'.json', 'r').read())
         gmap = {}
         for key, val in config.items():
             gmap[tuple(val["coords"])] = load_world(key, val)
